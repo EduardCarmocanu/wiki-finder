@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wikipedia Finder</title>
+<!-- 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.css">
+ -->	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<div id="root">
+		<div class="input-field">
+			<form id="search-form" @submit="handleSubmit">
+				<input type="text" name="term-input" id="term-input" placeholder="Search Wikipedia" v-model="searchTerm">
+			</form>
+		</div>
+		<search-results>
+			<result  v-if="results" v-for="result in results">
+				<h2 slot="title"><a href="result.link">{{ result.title }}</a></h2>
+				<p slot="body">
+					{{ result.body }}
+				</p>
+			</result>
+		</search-results>
+	</div>
+	<script src="https://unpkg.com/vue@2.3.4"></script>
+	<script src="./main.js"></script>
+</body>
+</html>

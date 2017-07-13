@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #0f0038;
+}
+ul {
+	list-style: none;
+}
+input {
+	padding: 10px;
+	font-size: 1.5em;
+}
+
+
+.input-field {
+	width:  100%;
+	margin: 100px 0 100px 0;
+}
+#search-form #term-input {
+	margin: 0 auto;
+	display: block;
+}
+.result {
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 10px;
+	background-color: rgb(240, 240, 240);
+	padding: 10px;
+	transition: transform .2s ease-out;
+}
+.result:hover {
+	transform: scale(0.95, 0.95);
+}
+
